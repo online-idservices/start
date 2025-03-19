@@ -1,0 +1,266 @@
+/* Font definitions */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/inter-400.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/inter-500.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/inter-700.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    src: url('fonts/inter-800.woff2') format('woff2');
+    font-display: swap;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #263635;
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #26cea3;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #1db992;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.flex-container-new {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/hero-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    margin: 0 auto 20px;
+}
+
+.title-container-custom{
+    background-color: rgb(240, 243, 249);
+    padding: 40px;
+}
+
+.get-indonesia {
+    font-size: 50px;
+    font-weight: 800;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h3 {
+    margin-bottom: 40px;
+}
+
+/* Declaration Section */
+.declaration-section {
+    padding: 80px 0;
+    background-color: #f9f9fb;
+}
+
+.declaration-section .text-content {
+    /* flex: 1; */
+    max-width: 500px;
+    text-align: center;
+}
+
+.declaration-section .text-content p{
+    text-align: left;
+}
+
+.declaration-section .image-container {
+    /* flex: 0 0 300px; */
+}
+
+.qr-image {
+    width: 300px;
+    max-width: 100%;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Insurance Section */
+.insurance-section {
+    padding: 80px 0;
+    background-color: #f9f9fb;
+}
+
+.insurance-section .flex-container {
+    flex-direction: row-reverse;
+}
+
+.insurance-section .text-content {
+    flex: 1;
+    text-align: right;
+}
+
+.insurance-section .image-container {
+    flex: 0 0 400px;
+}
+
+.map-image {
+    max-width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .flex-container {
+        flex-direction: column !important;
+    }
+    .flex-container-new {
+        flex-direction: column !important;
+    }
+
+    .declaration-section .text-content,
+    .insurance-section .text-content {
+        text-align: center;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .declaration-section,
+    .insurance-section {
+        padding: 60px 0;
+    }
+
+    .get-indonesia {
+        font-size: 30px;
+    }
+}
